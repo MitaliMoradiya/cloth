@@ -16,4 +16,7 @@ define('BANNER_SITE_PATH',SITE_PATH.'media/banner/');
 define('SHIPROCKET_TOKEN_EMAIL','gmail');
 define('SHIPROCKET_TOKEN_PASSWORD','password');
 
+
+
+
 ?>
