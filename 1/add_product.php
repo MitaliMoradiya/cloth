@@ -4,12 +4,12 @@
 // require('./admin/top.inc.php');
 require('./admin/connection.inc.php');
 require('./admin/functions.inc.php');
-if(isset($_SESSION['ADMIN_LOGIN']) && $_SESSION['ADMIN_LOGIN']!=''){
+// if(isset($_SESSION['ADMIN_LOGIN']) && $_SESSION['ADMIN_LOGIN']!=''){
 
-}else{
-	header('location:login.php');
-	die();
-}
+// }else{
+// 	header('location:login.php');
+// 	die();
+// }
 ?>
 
 <!doctype html>
@@ -38,7 +38,7 @@ if(isset($_SESSION['ADMIN_LOGIN']) && $_SESSION['ADMIN_LOGIN']!=''){
          <header id="header" class="header">
             <div class="top-left">
                <div class="navbar-header">
-                  <a class="navbar-brand" href="index.php">DropMate</a>
+                  <a class="navbar-brand" href="index.php">TR</TR></a>
                   <a class="navbar-brand hidden" href="index.php"><img src="./admin/images/logo2.png" alt="Logo"></a>
                   <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
                </div>
@@ -260,7 +260,7 @@ if(isset($_POST['submit'])){
 		if(isset($_GET['id']) && $_GET['id']!=''){
 			if($_FILES['image']['name']!=''){
 				$image=rand(111111111,999999999).'_'.$_FILES['image']['name'];
-				move_uploaded_file($_FILES['image']['tmp_name'],PRODUCT_IMAGE_SERVER_PATH.$image);
+				move_uploaded_file($_FILES['image']['tmp_name'],'media/product/'.$image);
 				// imageCompress($_FILES['image']['tmp_name'],PRODUCT_IMAGE_SERVER_PATH.$image);
 				$update_sql="update product set categories_id='$categories_id',name='$name',short_desc='$short_desc',description='$description',meta_title='$meta_title',meta_desc='$meta_desc',meta_keyword='$meta_keyword',image='$image',best_seller='$best_seller',sub_categories_id='$sub_categories_id' where id='$id'";
 			}else{
@@ -269,9 +269,9 @@ if(isset($_POST['submit'])){
 			mysqli_query($con,$update_sql);
 		}else{
 			$image=rand(111111111,999999999).'_'.$_FILES['image']['name'];
-			move_uploaded_file($_FILES['image']['tmp_name'],PRODUCT_IMAGE_SERVER_PATH.$image);
+			move_uploaded_file($_FILES['image']['tmp_name'],'media/product/'. $image);
 			// imageCompress($_FILES['image']['tmp_name'],PRODUCT_IMAGE_SERVER_PATH.$image);
-			mysqli_query($con,"insert into product(categories_id,name,mrp, price, qty,short_desc,description,meta_title,meta_desc,meta_keyword,status,image,best_seller,sub_categories_id,added_by) values('$categories_id','$name','$short_desc','$description','$meta_title','$meta_desc','$meta_keyword',1,'$image','$mrp', '$price', '$qty','$best_seller','$sub_categories_id','".$_SESSION['ADMIN_ID']."')");
+			mysqli_query($con,"insert into product(categories_id,name,mrp, price, qty,short_desc,description,meta_title,meta_desc,meta_keyword,status,image,best_seller,sub_categories_id,added_by) values('$categories_id','$name','$mrp', '$price', '$qty','$short_desc','$description','$meta_title','$meta_desc','$meta_keyword',1,'$image','$best_seller','$sub_categories_id','".$_SESSION['ADMIN_ID']."')");
 			$id=mysqli_insert_id($con);
 		}
 		

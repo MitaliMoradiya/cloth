@@ -3,7 +3,7 @@
             <div class="footer-inner bg-white">
                <div class="row">
                   <div class="col-sm-6">
-                     Copyright &copy; <?php echo date('Y')?> DropMate Team
+                     Copyright &copy; <?php echo date('Y')?> ThreadedRenewal Team
                   </div>
                   
                </div>

@@ -1,0 +1,46 @@
+@breakpoint-mobile: 480px;
+@breakpoint-desktop-large: 1200px;
+
+.is-hidden {
+  display: none !important;
+}
+
+.PageBackToWork {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  background: linear-gradient(to bottom right, #1073cb 20%, #139ff0 100%);
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+
+  &-heading {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: calc(56px + (72 - 56) * ((100vw - 480px) / (1200px - 480px)));
+
+    @media (min-width: 1200px) {
+      font-size: 72px;
+    }
+
+    &-rotationTextContainer {
+      position: relative;
+    }
+
+    &-rotationText {
+      display: inline-block;
+      position: relative;
+
+      &.is-inactive {
+        position: absolute;
+        right: 0;
+        bottom: 100%;
+      }
+    }
+
+    &-itText {
+      display: inline-block;
+    }
+  }
+}

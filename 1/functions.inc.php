@@ -20,49 +20,56 @@ function get_safe_value($con,$str){
 
 
 
-function get_product($con,$limit='',$cat_id='',$product_id='',$search_str='',$sort_order='',$is_best_seller='',$sub_categories='',$attr_id=''){
-	$sql="select product.*,categories.categories,product_attributes.mrp,product_attributes.price,product_attributes.qty from product,categories,product_attributes where product.status=1 and product.id=product_attributes.product_id";
+function get_product($con, $limit='', $cat_id='', $product_id='', $search_str='', $sort_order='', $is_best_seller='', $sub_categories='', $attr_id=''){
+	$sql = "select product.*, categories.categories, product_attributes.mrp, product_attributes.price, product_attributes.qty 
+			from product, categories, product_attributes 
+			where product.status=1 
+			and product.id=product_attributes.product_id 
+			and product.submission_status='approved'";  // Only approved products
 	
-	if($cat_id!=''){
-		$sql.=" and product.categories_id=$cat_id ";
+	if($cat_id != ''){
+		$sql .= " and product.categories_id=$cat_id ";
 	}
-	if($product_id!=''){
-		$sql.=" and product.id=$product_id ";
+	if($product_id != ''){
+		$sql .= " and product.id=$product_id ";
 	}
-	if($sub_categories!=''){
-		$sql.=" and product.sub_categories_id=$sub_categories ";
+	if($sub_categories != ''){
+		$sql .= " and product.sub_categories_id=$sub_categories ";
 	}
-	if($is_best_seller!=''){
-		$sql.=" and product.best_seller=1 ";
-	}
-	
-	if($attr_id>0){
-		$sql.=" and product_attributes.id=$attr_id";
-	}
-	
-	$sql.=" and product.categories_id=categories.id ";
-	if($search_str!=''){
-		$sql.=" and (product.name like '%$search_str%' or product.description like '%$search_str%') ";
+	if($is_best_seller != ''){
+		$sql .= " and product.best_seller=1 ";
 	}
 	
-	$sql.=" group by product.id ";
+	if($attr_id > 0){
+		$sql .= " and product_attributes.id=$attr_id";
+	}
 	
-	if($sort_order!=''){
-		$sql.=$sort_order;
-	}else{
-		$sql.=" order by product.id desc ";
+	$sql .= " and product.categories_id=categories.id ";
+	
+	if($search_str != ''){
+		$sql .= " and (product.name like '%$search_str%' or product.description like '%$search_str%') ";
 	}
-	if($limit!=''){
-		$sql.=" limit $limit";
+	
+	$sql .= " group by product.id ";
+	
+	if($sort_order != ''){
+		$sql .= $sort_order;
+	} else {
+		$sql .= " order by product.id desc ";
 	}
-	//echo $sql;
-	$res=mysqli_query($con,$sql);
-	$data=array();
-	while($row=mysqli_fetch_assoc($res)){
-		$data[]=$row;
+	
+	if($limit != ''){
+		$sql .= " limit $limit";
+	}
+	
+	$res = mysqli_query($con, $sql);
+	$data = array();
+	while($row = mysqli_fetch_assoc($res)){
+		$data[] = $row;
 	}
 	return $data;
 }
+
 
 function wishlist_add($con,$uid,$pid){
 	$added_on=date('Y-m-d h:i:s');

@@ -326,6 +326,7 @@
 }
 .product__thumb a img {
     width: 100%;
+    object-fit: cover;
 }
 .product__offer {
     left: 30px;
@@ -3603,3 +3604,4 @@ ul.htc__instagram__posts.owl-carousel li img {
     margin-top: 18px;
     font-size: 27px;
 }
+

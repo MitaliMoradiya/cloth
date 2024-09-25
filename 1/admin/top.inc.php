@@ -81,7 +81,7 @@ if(isset($_SESSION['ADMIN_LOGIN']) && $_SESSION['ADMIN_LOGIN']!=''){
          <header id="header" class="header">
             <div class="top-left">
                <div class="navbar-header">
-                  <a class="navbar-brand" href="index.php">DropMate</a>
+                  <a class="navbar-brand" href="index.php">TR</TR></a>
                   <a class="navbar-brand hidden" href="index.php"><img src="images/logo2.png" alt="Logo"></a>
                   <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
                </div>

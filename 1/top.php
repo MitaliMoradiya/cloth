@@ -68,6 +68,10 @@ if($mypage=='product.php'){
     <link rel="stylesheet" href="css/shortcode/shortcodes.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/responsive.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="main_home.css">
+	<link rel="stylesheet" href="assests/css/about.css">
+	<script src="js/main1.js"></script>
     <link rel="stylesheet" href="css/custom.css">
 	<script src="js/vendor/modernizr-3.5.0.min.js"></script>
 	<style>
@@ -86,7 +90,7 @@ if($mypage=='product.php'){
 		margin-right:15px;
 	}
 	</style>
-</head>
+	</head>
 
     <div class="wrapper">
         <header id="htc__header" class="htc__header__area header--one">
@@ -96,7 +100,7 @@ if($mypage=='product.php'){
                         <div class="menumenu__container clearfix">
                             <div class="col-lg-2 col-md-2 col-sm-3 col-xs-5"> 
                                 <div class="logo"><h2>
-                                     <a href="index.php">DropMate</a></h2>
+                                     <a href="index.php">TR </a></h2>
                                 </div>
                             </div>
                             <div class="col-md-7 col-lg-6 col-sm-5 col-xs-3">
