@@ -69,8 +69,8 @@ if($mypage=='product.php'){
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/responsive.css">
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="admin/assets/css/about.css">
 	<link rel="stylesheet" href="main_home.css">
-	<link rel="stylesheet" href="assests/css/about.css">
 	<script src="js/main1.js"></script>
     <link rel="stylesheet" href="css/custom.css">
 	<script src="js/vendor/modernizr-3.5.0.min.js"></script>
