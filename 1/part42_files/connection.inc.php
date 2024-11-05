@@ -15,13 +15,13 @@ define('PRODUCT_MULTIPLE_IMAGE_SITE_PATH',SITE_PATH.'media/product_images/');
 define('BANNER_SERVER_PATH',SERVER_PATH.'media/banner/');
 define('BANNER_SITE_PATH',SITE_PATH.'media/banner/');
 
-define('INSTAMOJO_KEY','key');
-define('INSTAMOJO_TOKEN','token');
+define('INSTAMOJO_KEY','5d1f9bd89ab39d75b324f4d975a046b7');
+define('INSTAMOJO_TOKEN','ad85920729d42b7ce52737cc5bd6a951');
 //https://www.youtube.com/watch?v=zWLKQ_loJqI&list=PLWCLxMult9xfYlDRir2OGRZFK397f3Yeb&index=24
 
 
-define('SMTP_EMAIL','email@gmail.com');
-define('SMTP_PASSWORD','password');
+define('SMTP_EMAIL','20bmiit076@gmail.com');
+define('SMTP_PASSWORD','123456789');
 //https://www.youtube.com/watch?v=aBbmo1pi5B0&list=PLWCLxMult9xfY_dsYicKGcCLhlZ6YXFMh&index=1
 
 
