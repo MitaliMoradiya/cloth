@@ -6,18 +6,25 @@ require('top.php');
 $resBanner=mysqli_query($con,"select * from banner where status='1' order by order_no asc");
 
 ?>
+<style>
 
+*{
+    scroll-behavior: smooth;
+}
+</style>
 
 <div class="body__overlay"></div>
-<main>
-		<section>
-			<h3>THREADED RENEWAL</h3>
-			<h1>TRANSFORM YOUR WARDROBE <span class="change_content" style="margin-top: -10px;">    |   </span> </h1>
-			<p>"From old to bold"</p>
-			<a href="#" class="btnone">learn more</a>
-			<a href="login.php" class="btntwo">signup here</a>
-		</section>
+<main style="background-image:  url('http://localhost/1/1//images/bg/sustainabilityedit.jpg'); background-size: cover; background-position: center; padding: 50px; color: white;">
+<section >
+    <h3>THREADED RENEWAL</h3>
+    <h1>TRANSFORM YOUR WARDROBE <span class="change_content" style="margin-top: -10px;"> | </span> </h1>
+    <p>"From old to bold"</p>
+    <a href="#aboutus" class="btnone" style="color: white; padding: 10px 20px; background-color: #333; border-radius: 5px; text-decoration: none;scroll-behavior: smooth;" >About US </a>
+    <a href="login.php" class="btntwo" style="color: white; padding: 10px 20px; background-color: #555; border-radius: 5px; text-decoration: none;">signup here</a>
+</section>
+
 	</main>
+  
         <!-- Start Slider Area -->
         <div class="slider__container slider--one bg__cat--3">
             <div class="slide__container slider__activation__wrap owl-carousel">
@@ -85,7 +92,8 @@ $resBanner=mysqli_query($con,"select * from banner where status='1' order by ord
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="section__title--2 text-center">
-                            <h2 class="title__line">New Arrivals</h2>
+                        <h2 class="title__line" style="margin-right: 420px;">New Arrivals</h2>
+
                         </div>
                     </div>
                 </div>
@@ -101,7 +109,7 @@ $resBanner=mysqli_query($con,"select * from banner where status='1' order by ord
                                 <div class="category">
                                     <div class="ht__cat__thumb">
                                         <a href="product.php?id=<?php echo $list['id']?>">
-                                            <img src="<?php echo PRODUCT_IMAGE_SITE_PATH.$list['image']?>" alt="product images" style="object-fit:cover; height:200px; width:200px;">
+                                            <img src="<?php echo PRODUCT_IMAGE_SITE_PATH.$list['image']?>" alt="product images" style="object-fit:cover; height:240px; width:250px;">
                                         </a>
                                     </div>
                                     <div class="fr__hover__info">
@@ -128,12 +136,12 @@ $resBanner=mysqli_query($con,"select * from banner where status='1' order by ord
         </section>
         <!-- End Category Area -->
         <!-- Start Product Area -->
-        <section class="ftr__product__area ptb--100">
+        <section class="ftr__product__area ptb--20" id="aboutus">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="section__title--2 text-center">
-                            <h2 class="title__line">Best Seller</h2>
+                        <h2 class="title__line" style="margin-right: 430px;">Best Seller</h2>
                         </div>
                     </div>
                 </div>
@@ -148,7 +156,7 @@ $resBanner=mysqli_query($con,"select * from banner where status='1' order by ord
                                 <div class="category">
                                     <div class="ht__cat__thumb">
                                         <a href="product.php?id=<?php echo $list['id']?>">
-                                            <img src="<?php echo PRODUCT_IMAGE_SITE_PATH.$list['image']?>" alt="product images" style="object-fit:cover; height:200px; width:200px;">
+                                            <img src="<?php echo PRODUCT_IMAGE_SITE_PATH.$list['image']?>" alt="product images" style="object-fit:cover; height:240px; width:250px;">
                                         </a>
                                     </div>
                                     <div class="fr__hover__info">
@@ -171,55 +179,44 @@ $resBanner=mysqli_query($con,"select * from banner where status='1' order by ord
                         </div>
                 </div>
             </div>
-            <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+            <br>
+            <br>
+            <section class="ftr__product__area ptb--20">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="section__title--2 text-center">
+                        <h2 class="title__line" style="margin-right: 430px;">About Us</h2>
+                        </div>
+                    </div>
+                </div>
+            <!-- <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" /> -->
+            <section class="about ">
+        <div class="container">
+            
+            <div class="about__content">
+                <div class="about__text">
+                    <h2>Who We Are</h2>
+                    <p>At Thread Renewal, we are passionate about sustainability and innovation in fashion. Our goal is to reduce textile waste by upcycling clothing, giving it a second chance to shine.</p>
+                </div>
 
-            <section class="about section" id="about">
-  <div class="about__container container grid">
-    <h2 class="section__title-1">
-      <span>About Me.</span>
-    </h2>
+                <div class="about__text">
+                    <h2>Our Mission</h2>
+                    <p>We believe in a world where fashion is responsible. Our mission is to inspire individuals to embrace sustainable choices and support eco-friendly practices in the industry.</p>
+                </div>
 
-    <div class="about__perfil">
-      <div class="about__image">
-        <img src="https://images.unsplash.com/photo-1577565177023-d0f29c354b69?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTI3Njk4OTB8&ixlib=rb-4.0.3&q=85" alt="image" class="about__img">
+                <div class="about__text">
+                    <h2>Our Journey</h2>
+                    <p>Founded in 2024, Thread Renewal started as a small initiative. Today, we are proud to be a community of like-minded individuals working towards a greener future.</p>
+                </div>
+            </div>
 
-        <div class="about__shadow"></div>
+            <div class="about__image">
+                <img src="images/bg/sustainabilityedit.jpg" alt="Thread Renewal" class="about__img">
+            </div>
+        </div>
+    </section>
 
-        <div class="geometric-box"></div>
-
-        <div class="about__box"></div>
-      </div>
-    </div>
-
-    <div class="about__info">
-      <p class="about__description">
-        Passionate about creating <b>Web Pages</b> with
-        <b>UI/UX User Interface</b>, I have years of
-        experience and many clients are happy with
-        the projects carried out.
-      </p>
-
-      <ul class="about__list">
-        <li class="about__item">
-          <b>My Skills Are:</b> HTML, CSS, JavaScript,
-          React, Git & GitHub, Bootstrap, Flutter &
-          Figma.
-        </li>
-      </ul>
-
-      <div class="about__buttons">
-        <a href="#contact" class="button">
-          <i class="ri-send-plane-line"></i> Contact Me
-        </a>
-
-        <a href="https://www.linkedin.com/" target="_blank" class="button__ghost">
-          <i class="ri-linkedin-box-line"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-        </section>
         <!-- End Product Area -->
 		<input type="hidden" id="qty" value="1"/>
         <script>
