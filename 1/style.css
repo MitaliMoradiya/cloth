@@ -370,11 +370,11 @@
 .product__action li a {
     background: #fefefe none repeat scroll 0 0;
     display: inline-block;
-    height: 50px;
-    line-height: 60px;
+    height: 42px;
+    /* line-height: 60px; */
     text-align: center;
     transition: all 0.4s ease 0s;
-    width: 50px;
+    /* width: 50px; */
 }
 .product__action li {
     margin: 0;
