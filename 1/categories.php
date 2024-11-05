@@ -76,9 +76,10 @@ if($cat_id>0){
 					<?php if(count($get_product)>0){?>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="htc__product__rightidebar">
+							 	
                             <div class="htc__grid__top">
                                 <div class="htc__select__option">
-                                    <select class="ht__select" onchange="sort_product_drop('<?php echo $cat_id?>','<?php echo SITE_PATH?>')" id="sort_product_id">
+                                    <select class="ht__select" onchange="sort_product_drop('<?php echo $cat_id?>','<?php echo SITE_PATH?>','<?php echo $sub_categories?>')" id="sort_product_id">
                                         <option value="">Default softing</option>
                                         <option value="price_low" <?php echo $price_low_selected?>>Sort by price low to hight</option>
                                         <option value="price_high" <?php echo $price_high_selected?>>Sort by price high to low</option>
@@ -100,7 +101,7 @@ if($cat_id>0){
 											<div class="category">
 												<div class="ht__cat__thumb">
 													<a href="product.php?id=<?php echo $list['id']?>">
-														<img src="<?php echo PRODUCT_IMAGE_SITE_PATH.$list['image']?>" alt="product images">
+														<img src="<?php echo PRODUCT_IMAGE_SITE_PATH.$list['image']?>" alt="product images" style="object-fit:contain; height:500px; width:500px;">
 													</a>
 												</div>
 												<div class="fr__hover__info">
@@ -112,8 +113,8 @@ if($cat_id>0){
 												<div class="fr__product__inner">
 													<h4><a href="product-details.html"><?php echo $list['name']?></a></h4>
 													<ul class="fr__pro__prize">
-														<li class="old__prize"><?php echo $list['mrp']?></li>
 														<li><?php echo $list['price']?></li>
+														<li class="old__prize"> <s > <?php echo $list['mrp']?> </s > </li>
 													</ul>
 												</div>
 											</div>

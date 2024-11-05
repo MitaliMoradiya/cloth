@@ -150,9 +150,10 @@ function manage_cart(pid,type,is_checkout){
 	}
 }
 
-function sort_product_drop(cat_id,site_path){
+function sort_product_drop(cat_id,site_path, sub_cat_id){
+	console.log(cat_id,site_path, sub_cat_id);	
 	var sort_product_id=jQuery('#sort_product_id').val();
-	window.location.href=site_path+"categories.php?id="+cat_id+"&sort="+sort_product_id;
+	window.location.href=site_path+"categories.php?id="+cat_id+"&sub_categories="+sub_cat_id+"&sort="+sort_product_id;
 }
 
 function wishlist_manage(pid,type){
